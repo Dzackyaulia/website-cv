@@ -16,13 +16,13 @@ export default function Home() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Education', href: '#education' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Beranda', href: '#home' },
+    { label: 'Tentang', href: '#about' },
+    { label: 'Pendidikan', href: '#education' },
+    { label: 'Pengalaman', href: '#experience' },
+    { label: 'Keahlian', href: '#skills' },
+    { label: 'Proyek', href: '#projects' },
+    { label: 'Kontak', href: '#contact' },
   ];
 
   return (

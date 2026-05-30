@@ -17,18 +17,18 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div className="text-center">
-            <h4 className="text-sm font-semibold text-blue-400 mb-4 uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-sm font-semibold text-blue-400 mb-4 uppercase tracking-wider">Tautan Cepat</h4>
             <div className="flex flex-col gap-2 text-gray-400 text-sm">
-              <a href="#home" className="hover:text-blue-400 transition-colors duration-300">Home</a>
-              <a href="#about" className="hover:text-blue-400 transition-colors duration-300">About</a>
-              <a href="#projects" className="hover:text-blue-400 transition-colors duration-300">Projects</a>
-              <a href="#contact" className="hover:text-blue-400 transition-colors duration-300">Contact</a>
+              <a href="#home" className="hover:text-blue-400 transition-colors duration-300">Beranda</a>
+              <a href="#about" className="hover:text-blue-400 transition-colors duration-300">Tentang</a>
+              <a href="#projects" className="hover:text-blue-400 transition-colors duration-300">Proyek</a>
+              <a href="#contact" className="hover:text-blue-400 transition-colors duration-300">Kontak</a>
             </div>
           </div>
 
           {/* Social Links */}
           <div className="text-center md:text-right">
-            <h4 className="text-sm font-semibold text-blue-400 mb-4 uppercase tracking-wider">Connect</h4>
+            <h4 className="text-sm font-semibold text-blue-400 mb-4 uppercase tracking-wider">Terhubung</h4>
             <div className="flex gap-4 justify-center md:justify-end">
               <a href="https://github.com/Dzackyaulia" target="_blank" rel="noopener noreferrer" className="group p-2 bg-slate-800/50 hover:bg-blue-500 rounded-lg transition-all duration-300">
                 <Github size={20} className="text-gray-400 group-hover:text-white transition-colors" />
@@ -46,8 +46,8 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-slate-700/50 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
-            <p>© {currentYear} Mhd Teuku Dzacky Aulia. All rights reserved.</p>
-            <p className="text-center md:text-right">Built with <span className="text-red-500">❤️</span> using Next.js & Tailwind CSS</p>
+            <p>© {currentYear} Mhd Teuku Dzacky Aulia. Semua hak dilindungi.</p>
+            <p className="text-center md:text-right">Dibuat dengan <span className="text-red-500">❤️</span> menggunakan Next.js & Tailwind CSS</p>
           </div>
         </div>
       </div>
