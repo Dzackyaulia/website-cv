@@ -99,13 +99,11 @@ export default function Hero() {
 
         {/* Right Side - Illustration */}
         <div className="flex-1 flex justify-center animate-fade-in-delay">
-          <div className="w-72 h-72 rounded-2xl bg-gradient-to-br from-accent/30 to-purple-500/30 flex items-center justify-center border border-accent/30 backdrop-blur-sm hover:border-accent/50 transition-all duration-300 hover:shadow-2xl hover:shadow-accent/20">
-            <div className="text-center">
-              <div className="text-7xl mb-4 animate-bounce">💻</div>
-              <p className="text-base text-gray-300 font-semibold">Developer & Problem Solver</p>
-              <p className="text-xs text-gray-500 mt-2">Full-stack | Cloud Technology</p>
-            </div>
-          </div>
+          <img 
+            src="/hero-image.png" 
+            alt="Developer & Problem Solver" 
+            className="w-full max-w-sm rounded-2xl shadow-2xl shadow-accent/30 hover:shadow-accent/50 transition-all duration-300 hover:scale-105 border border-accent/30"
+          />
         </div>
       </div>
     </section>
