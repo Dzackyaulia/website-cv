@@ -30,10 +30,10 @@ export default function Footer() {
           <div className="text-center md:text-right">
             <h4 className="text-sm font-semibold text-blue-400 mb-4 uppercase tracking-wider">Connect</h4>
             <div className="flex gap-4 justify-center md:justify-end">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="group p-2 bg-slate-800/50 hover:bg-blue-500 rounded-lg transition-all duration-300">
+              <a href="https://github.com/Dzackyaulia" target="_blank" rel="noopener noreferrer" className="group p-2 bg-slate-800/50 hover:bg-blue-500 rounded-lg transition-all duration-300">
                 <Github size={20} className="text-gray-400 group-hover:text-white transition-colors" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="group p-2 bg-slate-800/50 hover:bg-blue-500 rounded-lg transition-all duration-300">
+              <a href="https://www.linkedin.com/in/dzackyaulia" target="_blank" rel="noopener noreferrer" className="group p-2 bg-slate-800/50 hover:bg-blue-500 rounded-lg transition-all duration-300">
                 <Linkedin size={20} className="text-gray-400 group-hover:text-white transition-colors" />
               </a>
               <a href="mailto:dzackyaulia005@gmail.com" className="group p-2 bg-slate-800/50 hover:bg-blue-500 rounded-lg transition-all duration-300">

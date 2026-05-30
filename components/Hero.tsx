@@ -73,7 +73,7 @@ export default function Hero() {
           {/* Social Links - Enhanced */}
           <div className="flex gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/Dzackyaulia"
               target="_blank"
               rel="noopener noreferrer"
               className="group w-12 h-12 rounded-full bg-accent/10 hover:bg-accent border border-accent/30 hover:border-accent text-accent hover:text-white flex items-center justify-center transition-all duration-300 transform hover:scale-110"
@@ -81,7 +81,7 @@ export default function Hero() {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/dzackyaulia"
               target="_blank"
               rel="noopener noreferrer"
               className="group w-12 h-12 rounded-full bg-accent/10 hover:bg-accent border border-accent/30 hover:border-accent text-accent hover:text-white flex items-center justify-center transition-all duration-300 transform hover:scale-110"
