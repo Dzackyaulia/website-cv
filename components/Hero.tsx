@@ -16,54 +16,54 @@ export default function Hero() {
       <div className="flex flex-col md:flex-row items-center justify-between gap-20">
         <div className="flex-1 animate-fade-in">
           <div className="mb-12">
-            <div className="inline-block mb-8 px-5 py-2.5 bg-blue-500/10 border border-blue-400/30 rounded-full text-sm text-blue-300 font-semibold hover:bg-blue-500/15 transition-colors">
+            <div className="inline-block mb-8 px-5 py-2.5 bg-blue-500/10 border border-blue-400/30 rounded-full text-sm text-blue-300 font-semibold hover:bg-blue-500/15 transition-all duration-300 animate-fade-in-scale hover:scale-105">
               ✨ Selamat datang di portfolio saya
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
               Mhd Teuku<br />
-              <span className="gradient-text">Dzacky Aulia</span>
+              <span className="gradient-text animate-bounce-light">Dzacky Aulia</span>
             </h1>
-            <p className="text-lg md:text-xl text-blue-200 mb-6 font-semibold tracking-wide">
+            <p className="text-lg md:text-xl text-blue-200 mb-6 font-semibold tracking-wide animate-fade-in-up animate-delay-100">
               Informatics Student | Passionate Developer | Problem Solver
             </p>
-            <p className="text-gray-300 mb-12 max-w-xl leading-relaxed text-base md:text-lg">
+            <p className="text-gray-300 mb-12 max-w-xl leading-relaxed text-base md:text-lg animate-fade-in-up animate-delay-200">
               Mahasiswa Informatika bersemangat dengan lingkungan disiplin dan terstruktur. 
               Mampu bekerja sama dalam tim, cepat beradaptasi, dan memiliki etos kerja yang baik.
             </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 mb-14">
+          <div className="flex flex-col sm:flex-row gap-5 mb-14 animate-fade-in-up animate-delay-300">
             <button 
               onClick={handleDownloadCV}
-              className="group px-8 py-4 bg-gradient-to-r from-accent to-purple-600 hover:shadow-lg hover:shadow-accent/50 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:shadow-lg hover:shadow-blue-500/50 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 animate-pulse-glow hover-lift-sm"
             >
-              <Download size={20} />
+              <Download size={20} className="group-hover:animate-bounce" />
               Download CV
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <a href="#projects" className="px-8 py-4 bg-slate-700/50 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all duration-300 border border-slate-600 hover:border-accent flex items-center justify-center gap-2">
+            <a href="#projects" className="px-8 py-4 bg-slate-700/50 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all duration-300 border border-slate-600 hover:border-accent flex items-center justify-center gap-2 hover-lift-sm group">
               Lihat Project
-              <ArrowRight size={18} />
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
           {/* Contact Info - Improved Layout */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 py-6 border-y border-slate-700">
-            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-colors">
-              <div className="p-2 bg-accent/10 rounded-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 py-6 border-y border-slate-700 animate-fade-in-up animate-delay-400">
+            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-colors transform hover:scale-105 duration-300">
+              <div className="p-2 bg-accent/10 rounded-lg transition-all duration-300 group-hover:scale-110">
                 <MapPin size={18} className="text-accent" />
               </div>
               <span className="text-sm md:text-base">Bandung, Jawa Barat</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-colors">
-              <div className="p-2 bg-accent/10 rounded-lg">
+            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-colors transform hover:scale-105 duration-300">
+              <div className="p-2 bg-accent/10 rounded-lg transition-all duration-300">
                 <Phone size={18} className="text-accent" />
               </div>
               <span className="text-sm md:text-base">+62 823-3748-1312</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-colors">
-              <div className="p-2 bg-accent/10 rounded-lg">
+            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-colors transform hover:scale-105 duration-300">
+              <div className="p-2 bg-accent/10 rounded-lg transition-all duration-300">
                 <Mail size={18} className="text-accent" />
               </div>
               <span className="text-sm md:text-base">dzackyaulia005@gmail.com</span>
@@ -71,7 +71,7 @@ export default function Hero() {
           </div>
 
           {/* Social Links - Enhanced */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 animate-fade-in-up animate-delay-500">
             <a
               href="https://github.com/Dzackyaulia"
               target="_blank"
