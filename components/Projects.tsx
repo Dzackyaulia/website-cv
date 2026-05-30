@@ -2,23 +2,30 @@ export default function Projects() {
   const projects = [
     {
       title: 'Portfolio Website',
-      description: 'Website portfolio modern dengan Next.js, Tailwind CSS, dan deployment di Vercel. Menampilkan profil, pengalaman, dan kontak.',
+      description: 'Website portfolio modern dengan Next.js, Tailwind CSS, dan deployment di Vercel. Menampilkan profil, pengalaman, pendidikan, dan kontak.',
       tech: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript'],
       github: 'https://github.com/Dzackyaulia/website-cv',
       demo: '#',
     },
     {
-      title: 'Data Processing with Python',
-      description: 'Aplikasi pemrosesan data menggunakan Python untuk analisis dataset dan visualisasi hasil.',
-      tech: ['Python', 'Pandas', 'NumPy', 'Data Analysis'],
-      github: 'https://github.com/Dzackyaulia',
+      title: 'IMPAL Project',
+      description: 'Proyek implementasi dengan fokus pada pengembangan sistem dan best practices dalam software engineering.',
+      tech: ['Java', 'Database', 'OOP', 'Development'],
+      github: 'https://github.com/Dzackyaulia/impal',
       demo: '#',
     },
     {
-      title: 'Java Application Development',
-      description: 'Aplikasi desktop menggunakan Java dengan antarmuka user yang intuitif dan fitur lengkap.',
-      tech: ['Java', 'Swing', 'MySQL', 'Database'],
-      github: 'https://github.com/Dzackyaulia',
+      title: 'Kecerdasan Artifisial',
+      description: 'Implementasi konsep artificial intelligence dan machine learning untuk menyelesaikan berbagai permasalahan kompleks.',
+      tech: ['Python', 'Machine Learning', 'AI', 'Data Science'],
+      github: 'https://github.com/Dzackyaulia/Kecerdasan-artifisial',
+      demo: '#',
+    },
+    {
+      title: 'PBO Project',
+      description: 'Proyek Pemrograman Berorientasi Objek yang mendemonstrasikan konsep OOP seperti inheritance, polymorphism, dan encapsulation.',
+      tech: ['Java', 'OOP', 'Object-Oriented', 'Design Patterns'],
+      github: 'https://github.com/Dzackyaulia/pbo',
       demo: '#',
     },
   ];
@@ -32,7 +39,7 @@ export default function Projects() {
         <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-12"></div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <div
             key={index}
