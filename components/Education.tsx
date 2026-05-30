@@ -27,25 +27,29 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 bg-slate-800/30">
-      <h2 className="text-4xl md:text-5xl font-bold mb-12">
-        <span className="gradient-text">Pendidikan</span>
-      </h2>
+    <section id="education" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 bg-slate-800/30">
+      <div className="animate-slide-in-up">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <span className="gradient-text">Pendidikan</span>
+        </h2>
+        <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-12"></div>
+      </div>
 
       <div className="space-y-6">
         {education.map((edu, index) => (
           <div
             key={index}
-            className="bg-slate-700/50 backdrop-blur p-6 rounded-lg border border-slate-600 hover:border-accent transition-all card-hover"
+            style={{ animationDelay: `${index * 100}ms` }}
+            className="group bg-gradient-to-r from-slate-700/40 to-slate-800/40 backdrop-blur-sm p-6 rounded-xl border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-gradient-to-r hover:from-slate-700/60 hover:to-slate-800/60 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1 animate-slide-in-up"
           >
             <div className="flex justify-between items-start gap-4">
               <div className="flex-1">
-                <h3 className="text-xl font-semibold text-accent mb-1">{edu.school}</h3>
-                <p className="text-gray-300 font-medium mb-2">{edu.degree}</p>
-                <p className="text-gray-400 text-sm mb-3">{edu.description}</p>
+                <h3 className="text-xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors">{edu.school}</h3>
+                <p className="text-gray-300 font-semibold mb-2 group-hover:text-white transition-colors">{edu.degree}</p>
+                <p className="text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">{edu.description}</p>
               </div>
-              <div className="text-right">
-                <p className="text-accent font-semibold text-sm whitespace-nowrap">{edu.period}</p>
+              <div className="text-right flex-shrink-0">
+                <p className="text-blue-400 font-semibold text-sm whitespace-nowrap group-hover:text-blue-300 transition-colors">{edu.period}</p>
               </div>
             </div>
           </div>
