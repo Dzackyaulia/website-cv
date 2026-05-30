@@ -2,8 +2,8 @@
 /// <reference types="next/image-types/global" />
 
 declare module "*.css" {
-  const content: Record<string, string>;
-  export default content;
+  const css: string;
+  export default css;
 }
 
 // NOTE: This file should not be edited
