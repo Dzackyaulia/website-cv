@@ -26,12 +26,13 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 bg-slate-800/30">
-      <div className="animate-slide-in-up">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+    <section id="skills" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-40">
+      <div className="animate-slide-in-up mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
           <span className="gradient-text">Keahlian</span>
         </h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-12"></div>
+        <p className="text-gray-400 text-lg mb-6">Skill dan teknologi yang telah saya kuasai</p>
+        <div className="w-20 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -39,14 +40,14 @@ export default function Skills() {
           <div 
             key={category}
             style={{ animationDelay: `${index * 100}ms` }}
-            className="group bg-gradient-to-br from-slate-700/40 to-slate-800/40 backdrop-blur-sm p-6 rounded-xl border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-gradient-to-br hover:from-slate-700/60 hover:to-slate-800/60 hover:shadow-lg hover:shadow-blue-500/20 animate-slide-in-up"
+            className="group bg-gradient-to-br from-slate-700/30 to-slate-800/30 backdrop-blur-md p-7 rounded-2xl border border-slate-600/40 hover:border-blue-400/60 transition-all duration-500 hover:bg-gradient-to-br hover:from-slate-700/50 hover:to-slate-800/50 hover:shadow-2xl hover:shadow-blue-500/20 animate-slide-in-up"
           >
-            <h3 className="text-lg font-bold text-blue-400 mb-5 group-hover:text-blue-300 transition-colors">{category}</h3>
+            <h3 className="text-lg font-bold text-blue-300 mb-5 group-hover:text-blue-200 transition-colors">{category}</h3>
             <div className="flex flex-wrap gap-3">
               {items.map((skill, skillIndex) => (
                 <div
                   key={skillIndex}
-                  className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/40 hover:to-purple-500/40 text-blue-300 hover:text-blue-200 rounded-full text-sm font-semibold transition-all duration-300 border border-blue-500/30 hover:border-blue-500/60 cursor-default"
+                  className="px-4 py-2.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/35 hover:to-purple-500/35 text-blue-200 hover:text-blue-100 rounded-lg text-sm font-semibold transition-all duration-300 border border-blue-400/30 hover:border-blue-400/60 cursor-default"
                 >
                   {skill}
                 </div>
@@ -57,19 +58,19 @@ export default function Skills() {
       </div>
 
       {/* Certifications */}
-      <div className="group bg-gradient-to-br from-slate-700/40 to-slate-800/40 backdrop-blur-sm p-6 rounded-xl border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-gradient-to-br hover:from-slate-700/60 hover:to-slate-800/60 hover:shadow-lg hover:shadow-blue-500/20 mb-8 animate-slide-in-up" style={{ animationDelay: '400ms' }}>
-        <h3 className="text-lg font-bold text-blue-400 mb-5 group-hover:text-blue-300 transition-colors">🏆 Sertifikasi</h3>
+      <div className="group bg-gradient-to-br from-slate-700/30 to-slate-800/30 backdrop-blur-md p-7 rounded-2xl border border-slate-600/40 hover:border-green-400/60 transition-all duration-500 hover:bg-gradient-to-br hover:from-slate-700/50 hover:to-slate-800/50 hover:shadow-2xl hover:shadow-green-500/20 mb-8 animate-slide-in-up" style={{ animationDelay: '400ms' }}>
+        <h3 className="text-lg font-bold text-green-300 mb-5 group-hover:text-green-200 transition-colors">🏆 Sertifikasi</h3>
         <div className="flex flex-wrap gap-3">
-          <div className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 hover:from-green-500/40 hover:to-emerald-500/40 text-green-300 hover:text-green-200 rounded-full text-sm font-semibold transition-all duration-300 border border-green-500/30 hover:border-green-500/60">
+          <div className="px-4 py-2.5 bg-gradient-to-r from-green-500/20 to-emerald-500/20 hover:from-green-500/35 hover:to-emerald-500/35 text-green-200 hover:text-green-100 rounded-lg text-sm font-semibold transition-all duration-300 border border-green-400/30 hover:border-green-400/60">
             Microsoft AI-900: Azure AI Fundamentals
           </div>
         </div>
       </div>
 
       {/* Achievements */}
-      <div className="group bg-gradient-to-br from-slate-700/40 to-slate-800/40 backdrop-blur-sm p-6 rounded-xl border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-gradient-to-br hover:from-slate-700/60 hover:to-slate-800/60 hover:shadow-lg hover:shadow-blue-500/20 animate-slide-in-up" style={{ animationDelay: '500ms' }}>
-        <h3 className="text-lg font-bold text-blue-400 mb-5 group-hover:text-blue-300 transition-colors">🎖️ Prestasi</h3>
-        <div className="space-y-3">
+      <div className="group bg-gradient-to-br from-slate-700/30 to-slate-800/30 backdrop-blur-md p-7 rounded-2xl border border-slate-600/40 hover:border-amber-400/60 transition-all duration-500 hover:bg-gradient-to-br hover:from-slate-700/50 hover:to-slate-800/50 hover:shadow-2xl hover:shadow-amber-500/20 animate-slide-in-up" style={{ animationDelay: '500ms' }}>
+        <h3 className="text-lg font-bold text-amber-300 mb-5 group-hover:text-amber-200 transition-colors">🎖️ Prestasi</h3>
+        <div className="space-y-3.5">
           <p className="text-gray-300 group-hover:text-gray-100 transition-colors leading-relaxed">🥉 Juara Harapan 1 – OSN Matematika Tingkat Nasional (Tangerang, Banten) 2020</p>
           <p className="text-gray-300 group-hover:text-gray-100 transition-colors leading-relaxed">🏕️ Peserta Pendidikan Dasar Pecinta Alam - DIKLATSAR MAPALA PERIMATRIK</p>
         </div>

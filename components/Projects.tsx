@@ -31,45 +31,46 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-      <div className="animate-slide-in-up">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+    <section id="projects" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-40">
+      <div className="animate-slide-in-up mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
           <span className="gradient-text">Proyek</span>
         </h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-12"></div>
+        <p className="text-gray-400 text-lg mb-6">Berikut adalah beberapa project yang telah saya kerjakan</p>
+        <div className="w-20 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
         {projects.map((project, index) => (
           <div
             key={index}
             style={{ animationDelay: `${index * 100}ms` }}
-            className="group bg-gradient-to-br from-slate-700/40 to-slate-800/40 backdrop-blur-sm p-6 rounded-xl border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-gradient-to-br hover:from-slate-700/60 hover:to-slate-800/60 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-2 flex flex-col animate-slide-in-up"
+            className="group h-full bg-gradient-to-br from-slate-700/30 to-slate-800/30 backdrop-blur-md p-7 rounded-2xl border border-slate-600/40 hover:border-blue-400/60 transition-all duration-500 hover:bg-gradient-to-br hover:from-slate-700/50 hover:to-slate-800/50 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-1 flex flex-col animate-slide-in-up"
           >
-            <h3 className="text-lg font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors">{project.title}</h3>
-            <p className="text-gray-400 group-hover:text-gray-300 text-sm mb-4 flex-1 leading-relaxed">{project.description}</p>
+            <h3 className="text-xl font-bold text-blue-300 mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">{project.title}</h3>
+            <p className="text-gray-300 group-hover:text-gray-200 text-sm mb-5 flex-1 leading-relaxed">{project.description}</p>
             
-            <div className="mb-5 pb-5 border-b border-slate-600/50">
-              <p className="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wider">Tech Stack</p>
-              <div className="flex flex-wrap gap-2">
+            <div className="mb-6 pb-6 border-b border-slate-600/30">
+              <p className="text-xs text-gray-400 mb-3 font-semibold uppercase tracking-wider">Teknologi</p>
+              <div className="flex flex-wrap gap-2.5">
                 {project.tech.map((tech, i) => (
-                  <span key={i} className="px-3 py-1 bg-gradient-to-r from-blue-500/30 to-purple-500/30 text-blue-300 text-xs rounded-full font-medium border border-blue-500/30 group-hover:border-blue-500/60 transition-colors">
+                  <span key={i} className="px-3.5 py-1.5 bg-gradient-to-r from-blue-500/25 to-purple-500/25 text-blue-200 text-xs rounded-lg font-medium border border-blue-400/30 group-hover:border-blue-400/60 group-hover:bg-gradient-to-r group-hover:from-blue-500/35 group-hover:to-purple-500/35 transition-all">
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex gap-3 mt-auto">
               <a
                 href={project.github}
-                className="flex-1 text-center py-2 bg-slate-600/50 hover:bg-blue-500 text-gray-300 hover:text-white rounded-lg transition-all duration-300 text-sm font-semibold"
+                className="flex-1 text-center py-2.5 bg-slate-600/40 hover:bg-blue-600 text-gray-200 hover:text-white rounded-lg transition-all duration-300 text-sm font-semibold border border-slate-500/30 hover:border-blue-500/50"
               >
-                Github
+                GitHub
               </a>
               <a
                 href={project.demo}
-                className="flex-1 text-center py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:shadow-lg hover:shadow-blue-500/50 text-white rounded-lg transition-all duration-300 text-sm font-semibold"
+                className="flex-1 text-center py-2.5 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 hover:shadow-lg hover:shadow-blue-500/40 text-white rounded-lg transition-all duration-300 text-sm font-semibold"
               >
                 Demo
               </a>

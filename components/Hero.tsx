@@ -12,28 +12,28 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-40">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-16">
+    <section id="home" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-20">
         <div className="flex-1 animate-fade-in">
-          <div className="mb-8">
-            <div className="inline-block mb-6 px-4 py-2 bg-accent/10 border border-accent/30 rounded-full text-sm text-accent font-medium hover:bg-accent/20 transition-colors">
+          <div className="mb-12">
+            <div className="inline-block mb-8 px-5 py-2.5 bg-blue-500/10 border border-blue-400/30 rounded-full text-sm text-blue-300 font-semibold hover:bg-blue-500/15 transition-colors">
               ✨ Selamat datang di portfolio saya
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Mhd Teuku<br />
-              <span className="gradient-text animate-pulse">Dzacky Aulia</span>
+              <span className="gradient-text">Dzacky Aulia</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 font-medium">
+            <p className="text-lg md:text-xl text-blue-200 mb-6 font-semibold tracking-wide">
               Informatics Student | Passionate Developer | Problem Solver
             </p>
-            <p className="text-gray-400 mb-10 max-w-lg leading-relaxed text-base md:text-lg">
+            <p className="text-gray-300 mb-12 max-w-xl leading-relaxed text-base md:text-lg">
               Mahasiswa Informatika bersemangat dengan lingkungan disiplin dan terstruktur. 
               Mampu bekerja sama dalam tim, cepat beradaptasi, dan memiliki etos kerja yang baik.
             </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row gap-5 mb-14">
             <button 
               onClick={handleDownloadCV}
               className="group px-8 py-4 bg-gradient-to-r from-accent to-purple-600 hover:shadow-lg hover:shadow-accent/50 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
