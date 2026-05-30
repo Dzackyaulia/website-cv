@@ -1,6 +1,16 @@
 import { Mail, Phone, MapPin, Github, Linkedin, ArrowRight, Download } from 'lucide-react';
 
 export default function Hero() {
+  const handleDownloadCV = () => {
+    // Buat link untuk download
+    const link = document.createElement('a');
+    link.href = '/CV.pdf';
+    link.download = 'CV Mhd Teuku Dzacky Aulia.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-40">
       <div className="flex flex-col md:flex-row items-center justify-between gap-16">
@@ -24,7 +34,10 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <button className="group px-8 py-4 bg-gradient-to-r from-accent to-purple-600 hover:shadow-lg hover:shadow-accent/50 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <button 
+              onClick={handleDownloadCV}
+              className="group px-8 py-4 bg-gradient-to-r from-accent to-purple-600 hover:shadow-lg hover:shadow-accent/50 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            >
               <Download size={20} />
               Download CV
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
