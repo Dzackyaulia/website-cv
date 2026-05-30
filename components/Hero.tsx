@@ -1,8 +1,10 @@
 import { Mail, Phone, MapPin, Github, Linkedin, ArrowRight, Download } from 'lucide-react';
+import { useInView } from '@/hooks/useInView';
 
 export default function Hero() {
+  const { ref, isInView } = useInView({ once: true, threshold: 0.2 });
+
   const handleDownloadCV = () => {
-    // Buat link untuk download
     const link = document.createElement('a');
     link.href = '/CV.pdf';
     link.download = 'CV Mhd Teuku Dzacky Aulia.pdf';
@@ -12,57 +14,59 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-20">
-        <div className="flex-1 animate-fade-in">
-          <div className="mb-12">
-            <div className="inline-block mb-8 px-5 py-2.5 bg-blue-500/10 border border-blue-400/30 rounded-full text-sm text-blue-300 font-semibold hover:bg-blue-500/15 transition-colors">
+    <section 
+      id="home" 
+      className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32"
+      ref={ref}
+    >
+      <div className={`flex flex-col md:flex-row items-center justify-between gap-20 section-enter ${isInView ? 'active' : ''}`}>
+        <div className="flex-1">
+          <div className="mb-12 space-y-6">
+            <div className={`inline-block px-5 py-2.5 bg-blue-500/10 border border-blue-400/30 rounded-full text-sm text-blue-300 font-semibold hover:bg-blue-500/15 transition-all duration-300 hover:scale-105 content-fade-enter ${isInView ? 'active' : ''}`}>
               ✨ Selamat datang di portfolio saya
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold leading-tight content-fade-enter ${isInView ? 'active' : ''} delay-100`}>
               Mhd Teuku<br />
               <span className="gradient-text animate-bounce-light">Dzacky Aulia</span>
             </h1>
-            <p className="text-lg md:text-xl text-blue-200 mb-6 font-semibold tracking-wide">
+            <p className={`text-lg md:text-xl text-blue-200 font-semibold tracking-wide content-fade-enter ${isInView ? 'active' : ''} delay-200`}>
               Informatics Student | Passionate Developer | Problem Solver
             </p>
-            <p className="text-gray-300 mb-12 max-w-xl leading-relaxed text-base md:text-lg">
+            <p className={`text-gray-300 max-w-xl leading-relaxed text-base md:text-lg content-fade-enter ${isInView ? 'active' : ''} delay-300`}>
               Mahasiswa Informatika bersemangat dengan lingkungan disiplin dan terstruktur. 
               Mampu bekerja sama dalam tim, cepat beradaptasi, dan memiliki etos kerja yang baik.
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 mb-14">
+          <div className={`flex flex-col sm:flex-row gap-5 mb-14 content-fade-enter ${isInView ? 'active' : ''} delay-400`}>
             <button 
               onClick={handleDownloadCV}
-              className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:shadow-lg hover:shadow-blue-500/50 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 animate-pulse-glow"
+              className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:shadow-lg hover:shadow-blue-500/50 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 hover-lift-animation"
             >
-              <Download size={20} />
+              <Download size={20} className="group-hover:animate-bounce" />
               Download CV
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <a href="#projects" className="px-8 py-4 bg-slate-700/50 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all duration-300 border border-slate-600 hover:border-accent flex items-center justify-center gap-2">
-              Lihat Project
-              <ArrowRight size={18} />
+            <a href="#projects" className="px-8 py-4 bg-slate-700/50 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all duration-300 border border-slate-600 hover:border-accent flex items-center justify-center gap-2 group hover-lift-animation">
+              Lihat Proyek
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
-          {/* Contact Info - Improved Layout */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 py-6 border-y border-slate-700">
-            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-colors">
+          <div className={`grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 py-6 border-y border-slate-700 content-fade-enter ${isInView ? 'active' : ''} delay-500`}>
+            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-all duration-300 hover:scale-105 cursor-default">
               <div className="p-2 bg-accent/10 rounded-lg">
                 <MapPin size={18} className="text-accent" />
               </div>
               <span className="text-sm md:text-base">Bandung, Jawa Barat</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-colors">
+            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-all duration-300 hover:scale-105 cursor-default">
               <div className="p-2 bg-accent/10 rounded-lg">
                 <Phone size={18} className="text-accent" />
               </div>
               <span className="text-sm md:text-base">+62 823-3748-1312</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-colors">
+            <div className="flex items-center gap-3 text-gray-300 hover:text-accent transition-all duration-300 hover:scale-105 cursor-default">
               <div className="p-2 bg-accent/10 rounded-lg">
                 <Mail size={18} className="text-accent" />
               </div>
@@ -70,8 +74,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Social Links - Enhanced */}
-          <div className="flex gap-4">
+          <div className={`flex gap-4 content-fade-enter ${isInView ? 'active' : ''} delay-600`}>
             <a
               href="https://github.com/Dzackyaulia"
               target="_blank"

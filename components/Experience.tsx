@@ -1,3 +1,5 @@
+import { useInView } from '@/hooks/useInView';
+
 export default function Experience() {
   const experiences = [
     {
@@ -26,24 +28,30 @@ export default function Experience() {
     },
   ];
 
+  const { ref, isInView } = useInView({ once: true, threshold: 0.2 });
+
   return (
-    <section id="experience" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-      <div className="animate-slide-in-up">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+    <section 
+      id="experience" 
+      className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32"
+      ref={ref}
+    >
+      <div className={`section-enter mb-12 ${isInView ? 'active' : ''}`}>
+        <h2 className={`text-4xl md:text-5xl font-bold mb-6 section-header-enter ${isInView ? 'active' : ''}`}>
           <span className="gradient-text">Pengalaman</span>
         </h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-12"></div>
+        <div className={`w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full content-fade-enter ${isInView ? 'active' : ''} delay-100`}></div>
       </div>
 
       <div className="space-y-6">
         {experiences.map((exp, index) => (
           <div
             key={index}
-            style={{ animationDelay: `${index * 100}ms` }}
-            className="group bg-gradient-to-r from-slate-700/40 to-slate-800/40 backdrop-blur-sm p-6 rounded-xl border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-gradient-to-r hover:from-slate-700/60 hover:to-slate-800/60 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1 animate-slide-in-up"
+            className={`group bg-gradient-to-r from-slate-700/40 to-slate-800/40 backdrop-blur-sm p-6 rounded-xl border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-gradient-to-r hover:from-slate-700/60 hover:to-slate-800/60 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1 card-enter ${isInView ? 'active' : ''} hover-lift-animation`}
+            style={{ animationDelay: isInView ? `${index * 100}ms` : '0ms' }}
           >
             <div className="flex gap-4">
-              <div className="text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">{exp.icon}</div>
+              <div className="text-4xl group-hover:scale-125 group-hover:animate-wiggle transition-transform duration-300 flex-shrink-0 animate-bounce-light" style={{ animationDelay: `${index * 100 + 100}ms` }}>{exp.icon}</div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-lg font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors">{exp.title}</h3>
                 <p className="text-blue-500 text-sm font-semibold mb-2 group-hover:text-blue-400 transition-colors">{exp.period}</p>
