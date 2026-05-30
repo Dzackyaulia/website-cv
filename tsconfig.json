@@ -8,7 +8,7 @@
     ],
     "jsx": "preserve",
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "allowJs": true,
     "strict": true,
@@ -29,7 +29,8 @@
       }
     ],
     "isolatedModules": true,
-    "types": ["node", "next", "next/image-types/global"]
+    "types": ["node", "next", "next/image-types/global"],
+    "ignoreDeprecations": "6.0"
   },
   "include": [
     "next-env.d.ts",
